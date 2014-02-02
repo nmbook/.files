@@ -1,0 +1,2 @@
+. ~/.nmbook_init
+

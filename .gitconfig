@@ -1,0 +1,11 @@
+[user]
+    name = Nate Book
+    email = nmbook@gmail.com
+[alias]
+    unstage = reset HEAD --
+[push]
+    default = simple
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore_global
+

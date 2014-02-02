@@ -1,0 +1,6 @@
+[ui]
+username = Nate Book <nmbook@gmail.com>
+editor = vim
+[trusted]
+users = cs255
+

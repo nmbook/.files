@@ -1,0 +1,51 @@
+# enable screensaver [-> csug] 
+tty -s
+if [ $? -eq 1 ]
+then
+    [ -n "$DISPLAY"  ] && gnome-screensaver &
+fi
+
+# env vars for session
+PATH=/usr/bin:/bin:/u/nbook/Programs/bin:/usr/staff/bin:/usr/cs254/bin
+TERM=xterm-256color
+PS1_GREEN=$'\[\033[1;32m\]'
+PS1_GRAY=$'\[\033[1;30m\]'
+PS1_BLUE=$'\[\033[1;34m\]'
+PS1_CLEAR=$'\[\033[0m\]'
+PS1="$PS1_GRAY\u$PS1_CLEAR@$PS1_GREEN\h$PS1_CLEAR:$PS1_BLUE\W$PS1_CLEAR$ "
+CUPS_SERVER=print
+PERL5LIB=/u/nbook/perl5/lib/perl5
+LOAD_PATH=.
+export PATH CUPS_SERVER TERM PS1 PERL5LIB LOAD_PATH
+
+# shell aliases
+alias ll='ls -l'
+alias tree='tree -C'
+alias more='less'
+alias less='less -MR'
+alias gcim='gvim'
+alias givm='gvim'
+alias v='gvim'
+alias grep='grep --color=yes'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ls='ls -hF --color'
+alias t='gnome-terminal'
+alias term='t'
+alias xterm='t'
+alias konsole='t'
+alias terminal='t'
+alias logout='exit'
+alias unizp='unzip'
+alias lock='gnome-screensaver-command --lock'
+
+# shell umask
+umask 0077
+
+# shell options
+shopt -s checkwinsize histappend
+
+# fix shell not starting in ~
+cd ~
+
+

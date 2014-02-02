@@ -1,0 +1,16 @@
+# .files gitignore: ignore files that do not begin with .
+*
+!/.nmbook_init
+!/.bash_profile
+!/.bashrc
+!/.hushlogin
+!/.forward
+!/.gitconfig
+!/.gitignore
+!/.gitignore_global
+!/.hgrc
+!/.ssh/authorized_keys
+!/.tmux.conf
+!/.vimrc
+!/.vim/colors/deepblue.vim
+!/.gvimrc
