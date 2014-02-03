@@ -1,1 +1,1 @@
-. /u/nbook/.nmbook_init
+. ~/.nmbook_init
