@@ -19,7 +19,7 @@ export CUPS_SERVER=print
 
 # shell aliases
 alias ll='ls -l'
-alias tree='tree -AC'
+alias tree='tree -ACF'
 alias more='less'
 alias less='less -MR'
 alias gcim='gvim'
