@@ -7,6 +7,8 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set mouse=a
+set foldmethod=syntax
+set foldcolumn=1
 syntax on
 set autoindent
 filetype on
