@@ -28,6 +28,9 @@ alias konsole='t'
 alias terminal='t'
 alias logout='exit'
 alias unizp='unzip'
+alias img='eog'
+alias pdf='evince'
+alias rtf='libreoffice'
 alias lock='gnome-screensaver-command --lock'
 
 # shell umask
