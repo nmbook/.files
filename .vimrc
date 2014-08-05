@@ -9,6 +9,7 @@ set expandtab
 set mouse=a
 set foldmethod=syntax
 set foldcolumn=1
+set bs=2
 syntax on
 set autoindent
 filetype on
