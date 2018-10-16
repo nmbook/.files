@@ -1,3 +1,4 @@
+set t_Co=256
 set nu!
 set hls!
 let java_allow_cpp_keywords=1

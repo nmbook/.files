@@ -4,8 +4,11 @@ PS1_GREEN=$'\[\033[38;5;40m\]' # host name
 PS1_BLUE=$'\[\033[38;5;27m\]' # dir color
 PS1_CLEAR=$'\[\033[0m\]'
 export PS1="$PS1_GRAY\u$PS1_CLEAR@$PS1_GREEN\H$PS1_CLEAR:$PS1_BLUE\W$PS1_CLEAR\\$ "
-#export TERM=xterm-256color
-#[ -n "$TMUX" ] && export TERM=screen-256color
+if [ -e /usr/share/terminfo/x/xterm+256color ]; then
+    export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
 export GOPATH=~/.go
 export PATH=~/.go/bin:$PATH
 
