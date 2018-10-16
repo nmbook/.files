@@ -11,10 +11,12 @@ set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=9999
 set bs=2
-syntax on
 set autoindent
 filetype on
 filetype plugin indent on
+"syn keyword pythonStatement async await
+"au Syntax *.py syn keyword pythonStatement async await
+syntax on
 au BufNewFile,BufRead *.swipl set syntax=prolog
 "au BufReadPost *.rkt,*.rkt,*.lisp set filetype scheme
 au BufNewFile,BufRead *.rkt,*.rkt,*.lisp set syntax=lisp
