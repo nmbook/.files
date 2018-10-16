@@ -10,3 +10,5 @@ fi
 
 # User specific aliases and functions
 . ~/.nmbook_init
+. ~/.dircolors_init
+
