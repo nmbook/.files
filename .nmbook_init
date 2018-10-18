@@ -1,3 +1,4 @@
+# vi:syntax=sh
 # env vars for session
 PS1_GRAY=$'\[\033[38;5;242m\]' # username
 PS1_GREEN=$'\[\033[38;5;40m\]' # host name
