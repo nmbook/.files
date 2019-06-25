@@ -13,6 +13,9 @@ set foldcolumn=1
 set foldlevelstart=9999
 set bs=2
 set autoindent
+set scrolloff=5
+set ruler
+set cursorline
 filetype on
 filetype plugin indent on
 "syn keyword pythonStatement async await
