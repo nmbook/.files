@@ -16,6 +16,7 @@ set autoindent
 set scrolloff=5
 set ruler
 set cursorline
+set ambw=double
 filetype on
 filetype plugin indent on
 "syn keyword pythonStatement async await

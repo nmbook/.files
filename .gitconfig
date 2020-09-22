@@ -10,7 +10,8 @@
     editor = vim
     excludesfile = ~/.gitignore_global
     autocrlf = true
-    safecrlf = true
+    safecrlf = warn
+    filemode = false
 [color]
     status = auto
     diff = auto
