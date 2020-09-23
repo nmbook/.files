@@ -6,6 +6,7 @@ PS1_BLUE=$'\[\033[38;5;27m\]' # dir color
 PS1_GIT_WDD=$'\033[38;5;184m' # working tree dirty color
 PS1_GIT_BAH=$'\033[38;5;39m' # branch ahead color
 PS1_GIT_NTC=$'\033[38;5;41m' # nothing to commit color
+PS1_GIT_NAD=$'\033[38;5;43m' # nothing added to commit color
 PS1_CLEAR=$'\[\033[0m\]'
 PS1="$PS1_GRAY\u$PS1_CLEAR@$PS1_GREEN\H$PS1_CLEAR:$PS1_BLUE\W\[\$(git_color)\]\$(git_branch)$PS1_CLEAR\$ "
 if [ -n "$SSH_CLIENT" ]; then
@@ -43,6 +44,8 @@ function git_color {
     echo $PS1_GIT_WDD
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
     echo $PS1_GIT_BAH
+  elif [[ $git_status =~ "Nothing added to commit" ]]; then
+    echo $PS1_GIT_NAD
   else
     echo $PS1_GIT_NTC
   fi
