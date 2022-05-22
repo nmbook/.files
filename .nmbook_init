@@ -8,7 +8,7 @@ PS1_GIT_BAH=$'\033[38;5;39m' # branch ahead color
 PS1_GIT_NTC=$'\033[38;5;41m' # nothing to commit color
 PS1_GIT_NAD=$'\033[38;5;43m' # nothing added to commit color
 PS1_CLEAR=$'\[\033[0m\]'
-PS1="$PS1_GRAY\u$PS1_CLEAR@$PS1_GREEN\H$PS1_CLEAR:$PS1_BLUE\W\[\$(git_color)\]\$(git_branch)$PS1_CLEAR\$ "
+PS1="$PS1_GRAY\u$PS1_CLEAR@$PS1_GREEN\H$PS1_CLEAR:$PS1_BLUE\W$PS1_CLEAR\$ "
 if [ -n "$SSH_CLIENT" ]; then
     export PS1="\[\e]0;\u@\h:\W\a\]$PS1"
 else
@@ -22,34 +22,6 @@ elif [ -e /usr/share/terminfo/x/xterm-256color ]; then
 else
     export TERM='xterm-color'
 fi
-
-function git_branch {
-  local git_status="$(git status 2> /dev/null)"
-  local on_branch="On branch ([^${IFS}]*)"
-  local on_commit="HEAD detached at ([^${IFS}]*)"
-
-  if [[ $git_status =~ $on_branch ]]; then
-    local branch=${BASH_REMATCH[1]}
-    echo " ($branch)"
-  elif [[ $git_status =~ $on_commit ]]; then
-    local commit=${BASH_REMATCH[1]}
-    echo " (@$commit)"
-  fi
-}
-
-function git_color {
-  local git_status="$(git status 2> /dev/null)"
-
-  if [[ ! $git_status =~ "nothing to commit" ]]; then
-    echo $PS1_GIT_WDD
-  elif [[ $git_status =~ "Your branch is ahead of" ]]; then
-    echo $PS1_GIT_BAH
-  elif [[ $git_status =~ "Nothing added to commit" ]]; then
-    echo $PS1_GIT_NAD
-  else
-    echo $PS1_GIT_NTC
-  fi
-}
 
 # shell aliases
 alias ll='ls -l'
